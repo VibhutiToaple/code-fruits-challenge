@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Typography, Switch, Icon } from 'antd';
+import { Button, Typography, Switch } from 'antd';
+import Icon from '@ant-design/icons';
 
 // Styles
 const popoverContainerStyle: React.CSSProperties = {
