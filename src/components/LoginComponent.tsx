@@ -72,9 +72,8 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
             <Input
               autoFocus
               style={{
-                background: "#232b3e",
-                color: "#fff",
-                border: "1px solid #3e4a6b",
+                color: "rgba(0, 0, 0, 0.65)",
+                border: "1px solid rgb(62, 74, 107)",
               }}
               placeholder="Enter your username"
             />
@@ -87,9 +86,9 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
           >
             <Input.Password
               style={{
-                background: "#232b3e",
-                color: "#fff",
-                border: "1px solid #3e4a6b",
+                //background: "#232b3e",
+                color: "rgba(0, 0, 0, 0.65)",
+                border: "1px solid rgb(62, 74, 107)",
               }}
               placeholder="Enter your password"
             />

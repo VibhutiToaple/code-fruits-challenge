@@ -5,10 +5,11 @@
     /coverage
 
     # Build artifacts
-    dist/
-    build/
+    dist
+    build
 
     # misc
     .DS_Store
     npm-debug.log*
+
 node_modules
