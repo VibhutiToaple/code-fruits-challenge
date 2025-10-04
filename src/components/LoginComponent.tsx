@@ -32,8 +32,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
         alignItems: "center",
         justifyContent: "center",
         background: "#232b3e",
-      }}
-    >
+      }}>
       <Card
         style={{
           minWidth: 340,
@@ -41,8 +40,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
           background: "#232b3e",
           border: "1px solid #3e4a6b",
         }}
-        bodyStyle={{ padding: 32 }}
-      >
+        bodyStyle={{ padding: 32 }}>
         <Typography.Title
           level={2}
           style={{
@@ -53,22 +51,15 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
             fontWeight: 700,
             letterSpacing: 2,
             textShadow: "0 1px 2px #0006",
-          }}
-        >
+          }}>
           Login
         </Typography.Title>
 
-        <Form
-          form={form}
-          layout="vertical"
-          autoComplete="off"
-          onFinish={handleSubmit}
-        >
+        <Form form={form} layout="vertical" autoComplete="off" onFinish={handleSubmit}>
           <Form.Item
             label={<span style={{ color: "#e0e0e0", fontWeight: 500 }}>Username</span>}
             name="username"
-            rules={[{ required: true, message: "Please input your username!" }]}
-          >
+            rules={[{ required: true, message: "Please input your username!" }]}>
             <Input
               autoFocus
               style={{
@@ -82,8 +73,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
           <Form.Item
             label={<span style={{ color: "#e0e0e0", fontWeight: 500 }}>Password</span>}
             name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
-          >
+            rules={[{ required: true, message: "Please input your password!" }]}>
             <Input.Password
               style={{
                 //background: "#232b3e",
@@ -112,8 +102,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
                 border: "none",
                 color: "#fff",
                 boxShadow: "0 2px 8px #0002",
-              }}
-            >
+              }}>
               Login
             </Button>
           </Form.Item>

@@ -33,13 +33,11 @@ export const GridDropOverlay: React.FC<GridDropOverlayProps> = ({
         transition: "background 0.1s, opacity 0.1s",
         // Optionally, add userSelect: 'none' to avoid accidental text selection
         userSelect: "none",
-      }}
-    >
+      }}>
       {[...Array(rows * cols)].map((_, idx) => {
         const row = Math.floor(idx / cols);
         const col = idx % cols;
-        const isActive =
-          activeCell && activeCell.row === row && activeCell.col === col;
+        const isActive = activeCell && activeCell.row === row && activeCell.col === col;
         return (
           <div
             key={idx}

@@ -5,7 +5,10 @@ interface MainWorkspaceProps {
   children: React.ReactNode;
   onDrop: (e: React.DragEvent<HTMLDivElement>) => void;
   onDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
-  onGridDropInfo?: (info: { cell: { row: number; col: number } | null; size: { width: number; height: number } }) => void;
+  onGridDropInfo?: (info: {
+    cell: { row: number; col: number } | null;
+    size: { width: number; height: number };
+  }) => void;
   gridRows?: number;
   gridCols?: number;
 }
@@ -61,7 +64,6 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
         node.removeEventListener("dragleave", handleDragLeave as any);
       }
     };
-    // eslint-disable-next-line
   }, [containerSize, onGridDropInfo]);
 
   // Listen for panel drag events (custom event)
@@ -110,14 +112,14 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
     <div
       ref={workspaceRef}
       style={{ position: "relative", width: "100%", height: "100%" }}
-      onDrop={e => {
+      onDrop={(e) => {
         setDragging(false);
         setIsPanelDragging(false);
         setActiveCell(null);
         if (onGridDropInfo) onGridDropInfo({ cell: null, size: containerSize });
         onDrop(e);
       }}
-      onDragOver={e => {
+      onDragOver={(e) => {
         handleDragOver(e);
         onDragOver(e);
       }}

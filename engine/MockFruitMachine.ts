@@ -1,4 +1,4 @@
-export type Fruit = 'apple' | 'banana' | 'orange';
+export type Fruit = "apple" | "banana" | "orange";
 
 export interface FruitInventory {
   [fruit: string]: number;

@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
     /* === Core React/TypeScript Setup === */
-    "target": "ESNext",                           // modern JS output
+    "target": "ESNext", // modern JS output
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],     // include DOM + modern JS features
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // include DOM + modern JS features
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,                               // enables all strict checks
+    "strict": true, // enables all strict checks
     "forceConsistentCasingInFileNames": true,
-    "module": "node16",
-    "moduleResolution": "node16",
+    "allowImportingTsExtensions": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
 
     /* === React & JSX Support === */
-    "jsx": "react-jsx",                           // new JSX transform (React 17+)
+    "jsx": "react-jsx", // new JSX transform (React 17+)
 
     /* === Vitest Types === */
     "types": ["vitest/globals", "vite/client"],
@@ -28,13 +29,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": [
-    "src",
-    "vite.config.ts",
-    "vitest.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src", "vite.config.ts", "vitest.config.ts", "auth/**/*.ts", "server/**/*.js"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -8,7 +8,7 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-export const ThemeProvider = ({ mode, children }: ThemeProviderProps) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   // Theme switching not supported in v4, just render children
   return <ConfigProvider>{children}</ConfigProvider>;
 };
