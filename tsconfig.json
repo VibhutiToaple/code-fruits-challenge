@@ -1,8 +1,40 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    /* === Core React/TypeScript Setup === */
+    "target": "ESNext",                           // modern JS output
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],     // include DOM + modern JS features
+    "allowJs": false,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strict": true,                               // enables all strict checks
+    "forceConsistentCasingInFileNames": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* === React & JSX Support === */
+    "jsx": "react-jsx",                           // new JSX transform (React 17+)
+
+    /* === Vitest Types === */
+    "types": ["vitest/globals", "vite/client"],
+
+    /* === Path Aliases (optional, if you use @/components etc.) === */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
