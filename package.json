@@ -5,15 +5,18 @@
   "description": "Minimal React 16 project",
   "main": "index.tsx",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
+    "@vitejs/plugin-react": "^5.0.4",
     "ag-grid-react": "^33.3.2",
     "antd": "^5.27.4",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "vite": "^7.1.9"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
@@ -29,8 +32,7 @@
     "style-loader": "^1.3.0",
     "ts-loader": "^8.4.0",
     "typescript": "^4.9.5",
-    "webpack": "^5.102.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-html-purgecss": "^0.1.1"
   }
 }
