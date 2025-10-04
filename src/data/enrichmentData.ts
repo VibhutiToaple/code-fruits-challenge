@@ -1,8 +1,8 @@
 // src/data/enrichmentData.ts
 
-/** 
- * Example enrichment dataset used by panels/lists. 
- * Adjust shape as per your project needs. 
+/**
+ * Example enrichment dataset used by panels/lists.
+ * Adjust shape as per your project needs.
  */
 export type EnrichmentItem = {
   id: string;
